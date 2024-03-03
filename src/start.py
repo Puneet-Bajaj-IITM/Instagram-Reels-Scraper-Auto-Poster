@@ -101,60 +101,15 @@ if setup == 'y' :
 
 
     while True:
-        mainConfig.IS_ENABLED_REELS_SCRAPER = input("  (IS_ENABLED_REELS_SCRAPER) Turn On Reels Scraper? 1=On;0=Off :")
-        if mainConfig.IS_ENABLED_REELS_SCRAPER == "0" or mainConfig.IS_ENABLED_REELS_SCRAPER == "1":
-            Helper.save_config('IS_ENABLED_REELS_SCRAPER',mainConfig.IS_ENABLED_REELS_SCRAPER)
-            break
-        else:
-            print("  [red]Invalid input. Please enter only 0 or 1.[/red]")
 
-    if mainConfig.IS_ENABLED_REELS_SCRAPER == "1" :
-
-        while True:
-            mainConfig.FETCH_LIMIT = input("  (FETCH_LIMIT) Define number of latest reels to be scrape from each account :")
-            if mainConfig.IS_ENABLED_REELS_SCRAPER.isdigit():
-                Helper.save_config('FETCH_LIMIT',mainConfig.FETCH_LIMIT)
-                break
-            else:
-                print("   [red]Invalid input. Please enter only numeric values.[red]") 
-
-        while True:
-            mainConfig.SCRAPER_INTERVAL_IN_MIN = input("  (SCRAPER_INTERVAL_IN_MIN) Define scraper interval in minuters :")
-            if mainConfig.SCRAPER_INTERVAL_IN_MIN.isdigit():
-                Helper.save_config('SCRAPER_INTERVAL_IN_MIN',mainConfig.SCRAPER_INTERVAL_IN_MIN)
-                break
-            else:
-                print("   [red]Invalid input. Please enter only numeric values.[red]") 
-            
     while True:
-        mainConfig.IS_ENABLED_AUTO_POSTER = input("  (IS_ENABLED_AUTO_POSTER) Turn On Reels Autoposter? 1=On;0=Off :")
+        mainConfig.IS_ENABLED_AUTO_POSTER = '1'
         if mainConfig.IS_ENABLED_AUTO_POSTER == "0" or mainConfig.IS_ENABLED_AUTO_POSTER == "1":
             Helper.save_config('IS_ENABLED_AUTO_POSTER',mainConfig.IS_ENABLED_AUTO_POSTER)
             break
         else:
             print("  [red]Invalid input. Please enter only 0 or 1.[/red]")
 
-    if mainConfig.IS_ENABLED_AUTO_POSTER == "1" :
-
-        while True:
-            mainConfig.POSTING_INTERVAL_IN_MIN = input("  (POSTING_INTERVAL_IN_MIN) Define posting interval in minutes :")
-            if mainConfig.IS_ENABLED_REELS_SCRAPER.isdigit():
-                Helper.save_config('POSTING_INTERVAL_IN_MIN',mainConfig.POSTING_INTERVAL_IN_MIN)
-                break
-            else:
-                print("   [red]Invalid input. Please enter only numeric values.[red]") 
-
-    
-
-    while True:
-        mainConfig.IS_POST_TO_STORY = input("  (IS_POST_TO_STORY) Turn On post reels into stroy? 1=On;0=Off :")
-        if mainConfig.IS_POST_TO_STORY == "0" or mainConfig.IS_POST_TO_STORY == "1":
-            Helper.save_config('IS_POST_TO_STORY',mainConfig.IS_POST_TO_STORY)
-            break
-        else:
-            print("  [red]Invalid input. Please enter only 0 or 1.[/red]")
-
-    
 
 
     if mainConfig.IS_ENABLED_AUTO_POSTER == "1"  or mainConfig.IS_ENABLED_REELS_SCRAPER == "1":
