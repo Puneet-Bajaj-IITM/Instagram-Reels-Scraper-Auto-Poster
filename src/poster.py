@@ -76,12 +76,7 @@ def main(api):
                     # "custom_accessibility_caption": "alt text example",
                     "like_and_view_counts_disabled": config.LIKE_AND_VIEW_COUNTS_DISABLED,
                     "disable_comments": config.DISABLE_COMMENTS,
-                })
-
-            if media:
-                update_status(reel.code)
-                if int(config.IS_POST_TO_STORY) == 1 :
-                    post_to_story(api,media,reel.file_path)                
+                })              
                 
         pass
 
